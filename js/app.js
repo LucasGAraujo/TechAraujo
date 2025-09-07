@@ -84,57 +84,30 @@ function extrairTextoConteudo(content) {
         return '';
     }).join(' ');
 }
-  // --- LÓGICA DE POSTS ---
-  // CÓDIGO NOVO para renderCards
 const renderCards = (posts) => {
-    grid.innerHTML = '';
-    let rendered = false;
-    posts.forEach(post => {
-        if (!post) return;
-        rendered = true;
-        const { title, subtitle, content, date } = post;
-        // Extrai texto do conteúdo
-        const previewText = Array.isArray(content) ? extrairTextoConteudo(content).substring(0, 90) + '...' : (content && typeof content === 'string' ? content.replace(/<[^>]*>/g, '').substring(0, 90) + '...' : '');
-        card = document.createElement('article');
-        card.className = 'post-card';
-        card.setAttribute('tabindex', '0');
-        card.innerHTML = `<h2>${title}</h2><p>${subtitle || previewText}</p><span>${formatarData(date)}</span>`;
-        // Remover role="button" dos <article> e adicionar aria-label dinâmico via JS
-        const ariaLabel = `Leia mais sobre ${title}`;
-        card.setAttribute('aria-label', ariaLabel);
-        card.addEventListener('click', () => abrirModal(post));
-        card.addEventListener('keydown', (e) => {
+      grid.innerHTML = '';
+      posts.forEach(post => {
+          const card = document.createElement('article');
+          card.className = 'post-card';
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('role', 'button');
+          card.innerHTML = `<h2>${post.title}</h2><p>${post.subtitle || post.content[0].substring(0, 90) + '...'}</p><span>${post.date}</span>`;
+          
+          card.addEventListener('click', () => abrirModal(post));
+          card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                abrirModal(post);
+              e.preventDefault();
+              abrirModal(post);
             }
-        });
-        grid.appendChild(card);
-    });
-    if (!rendered) {
-        grid.innerHTML = '<p>Nenhum artigo disponível.</p>';
-    }
-};
+          });
+          grid.appendChild(card);
+      });
+  };
 
-  const apiUrl = 'https://meu-blog-okbackend.onrender.com/api/abouts?populate=*';
-
-fetch(apiUrl)
-    .then(res => res.json())
-    .then(response => {
-        console.log('API response:', response);
-        let posts = response.data;
-        // Garante que posts seja sempre um array
-        if (!Array.isArray(posts)) {
-            posts = posts ? [posts] : [];
-        }
-        postsData = posts;
-        renderCards(posts);
-    })
-    .catch(error => {
-        console.error("Erro ao buscar dados da API:", error);
-        grid.innerHTML = "<p>Não foi possível carregar os artigos. Tente novamente mais tarde.</p>";
-    });
-
+  fetch('./posts.json').then(res => res.json()).then(posts => {
+      postsData = posts;
+      renderCards(posts);
+  });
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase().trim();
     const filteredPosts = postsData.filter(post => {

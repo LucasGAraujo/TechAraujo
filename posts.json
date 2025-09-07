@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Acessibilidade além do contraste",
+    "subtitle": "Repensando a inclusão digital com foco na arquitetura da informação",
+    "author": "Lucas Araujo",
+    "date": "29 de junho, 2025",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "content": [
+      "Quando falamos em acessibilidade na web, qual é a primeira imagem que vem à sua mente? Para muitos, são os ícones de aumentar a fonte (A+/A-) ou o botão de alto contraste. Ferramentas essenciais, sem dúvida, mas que representam apenas a camada mais superficial da inclusão digital — a 'pintura' do edifício. Mas e a fundação? E as paredes, os corredores, os elevadores?",
+      "A maioria dos projetos foca apenas em contraste e legibilidade, mas a verdadeira acessibilidade, aquela que empodera e oferece autonomia, começa muito antes de uma única linha de CSS ser escrita: ela nasce na <strong>estrutura da informação</strong>.",
+      "<h3>O Equívoco da Acessibilidade como 'Reparo'</h3>",
+      "Imagine contratar um arquiteto para construir a casa dos seus sonhos. Ele projeta cômodos espaçosos, uma cozinha funcional e quartos aconchegantes. A casa é construída e, só no final, alguém percebe: 'esquecemos das rampas e dos vãos das portas para a cadeira de rodas'. A solução? Rampas improvisadas, portas alargadas às pressas. A casa se torna 'acessível', mas a experiência de quem precisa desses recursos é marcada por adaptações, por sentir que foi uma consideração tardia.",
+      "Na web, é a mesma coisa. Tratar a acessibilidade como um item a ser 'verificado' no final — ajustando cores, adicionando textos alternativos em imagens e garantindo o funcionamento dos botões do menu — é tratar a inclusão como um reparo. É útil, mas não é transformador.",
+      "A verdadeira inclusão digital não pergunta 'Como podemos consertar isso para ser acessível?', mas sim <strong>'Como podemos construir isso para que nasça acessível para todos?'</strong>",
+      "",
+      "<h3>A Arquitetura da Informação como Pilar da Inclusão</h3>",
+      "É aqui que a Arquitetura da Informação (AI) se torna a nossa ferramenta mais poderosa. Uma arquitetura bem definida permite que usuários com diferentes deficiências naveguem com confiança, pois cria um mapa mental claro e previsível do ambiente digital. Veja como isso funciona na prática:",
+      "<strong>1. Hierarquia Clara com Cabeçalhos (H1, H2, H3...)</strong>",
+      "Para um usuário vidente, a estrutura de uma página é percebida visualmente através de tamanhos de fonte e espaços. Para um usuário de leitor de tela, a estrutura é percebida através dos cabeçalhos. Ele não lê a página inteira; ele 'escaneia' os cabeçalhos para entender os tópicos e pular diretamente para a seção que lhe interessa. Uma página sem uma ordem lógica de    é como um livro sem capítulos: uma parede de texto impenetrável.",
+      "<strong>2. Navegação Lógica e 'Landmarks' ARIA</strong>",
+      "Um menu consistente e uma clara distinção de onde começa o conteúdo principal são cruciais. Para usuários de teclado e leitores de tela, os 'ARIA Landmarks' (como &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;) funcionam como placas de sinalização digitais, permitindo pular diretamente para as seções importantes com um simples atalho.",
+      "<strong>3. Links Descritivos e Contextuais</strong>",
+      "Quantas vezes vemos listas de links que apenas dizem 'Clique aqui' ou 'Saiba mais'? Para um usuário de leitor de tela, que pode pedir para listar todos os links da página, essa lista se torna inútil. Em vez de 'Para saber mais, <strong>clique aqui</strong>', um link como 'Consulte as <strong>Diretrizes Oficiais de Acessibilidade da W3C</strong>' é imediatamente claro, mesmo fora de contexto.",
+      "",
+      "<h3>O Resultado: Navegar com Confiança</h3>",
+      "Quando a estrutura é sólida, o usuário não precisa 'decifrar' cada nova página. Ele aprende o padrão do seu site e o utiliza para navegar de forma eficiente e autônoma. A confiança nasce dessa previsibilidade. A frustração diminui. A experiência do usuário (UX) se torna universalmente melhor, não apenas para pessoas com deficiência, mas para todos.",
+      "Pense na acessibilidade não como uma funcionalidade, mas como a fundação sobre a qual uma ótima experiência é construída. É a diferença entre uma casa com uma rampa adicionada de última hora e um lar projetado desde o início para acolher a todos. A pintura pode esperar. A fundação, não.",
+      "",
+      "Quer se aprofundar no assunto? O melhor lugar para começar é o portal da Web Accessibility Initiative (WAI).",
+      "Veja também: <a href='https://www.w3.org/WAI/' target='_blank' rel='noopener noreferrer'>Diretrizes Oficiais de Acessibilidade da W3C</a>"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "De nike paguei a vista ",
+    "subtitle": "Repensando a inclusão digital com foco na arquitetura da informação",
+    "author": "Lucas Araujo",
+    "date": "29 de junho, 2025",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "content": [
+      "Quando falamos em acessibilidade na web, qual é a primeira imagem que vem à sua mente? Para muitos, são os ícones de aumentar a fonte (A+/A-) ou o botão de alto contraste. Ferramentas essenciais, sem dúvida, mas que representam apenas a camada mais superficial da inclusão digital — a 'pintura' do edifício. Mas e a fundação? E as paredes, os corredores, os elevadores?",
+      "A maioria dos projetos foca apenas em contraste e legibilidade, mas a verdadeira acessibilidade, aquela que empodera e oferece autonomia, começa muito antes de uma única linha de CSS ser escrita: ela nasce na <strong>estrutura da informação</strong>.",
+      "<h3>O Equívoco da Acessibilidade como 'Reparo'</h3>",
+      "Imagine contratar um arquiteto para construir a casa dos seus sonhos. Ele projeta cômodos espaçosos, uma cozinha funcional e quartos aconchegantes. A casa é construída e, só no final, alguém percebe: 'esquecemos das rampas e dos vãos das portas para a cadeira de rodas'. A solução? Rampas improvisadas, portas alargadas às pressas. A casa se torna 'acessível', mas a experiência de quem precisa desses recursos é marcada por adaptações, por sentir que foi uma consideração tardia.",
+      "Na web, é a mesma coisa. Tratar a acessibilidade como um item a ser 'verificado' no final — ajustando cores, adicionando textos alternativos em imagens e garantindo o funcionamento dos botões do menu — é tratar a inclusão como um reparo. É útil, mas não é transformador.",
+      "A verdadeira inclusão digital não pergunta 'Como podemos consertar isso para ser acessível?', mas sim <strong>'Como podemos construir isso para que nasça acessível para todos?'</strong>",
+      "",
+      "<h3>A Arquitetura da Informação como Pilar da Inclusão</h3>",
+      "É aqui que a Arquitetura da Informação (AI) se torna a nossa ferramenta mais poderosa. Uma arquitetura bem definida permite que usuários com diferentes deficiências naveguem com confiança, pois cria um mapa mental claro e previsível do ambiente digital. Veja como isso funciona na prática:",
+      "<strong>1. Hierarquia Clara com Cabeçalhos (H1, H2, H3...)</strong>",
+      "Para um usuário vidente, a estrutura de uma página é percebida visualmente através de tamanhos de fonte e espaços. Para um usuário de leitor de tela, a estrutura é percebida através dos cabeçalhos. Ele não lê a página inteira; ele 'escaneia' os cabeçalhos para entender os tópicos e pular diretamente para a seção que lhe interessa. Uma página sem uma ordem lógica de    é como um livro sem capítulos: uma parede de texto impenetrável.",
+      "<strong>2. Navegação Lógica e 'Landmarks' ARIA</strong>",
+      "Um menu consistente e uma clara distinção de onde começa o conteúdo principal são cruciais. Para usuários de teclado e leitores de tela, os 'ARIA Landmarks' (como &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;) funcionam como placas de sinalização digitais, permitindo pular diretamente para as seções importantes com um simples atalho.",
+      "<strong>3. Links Descritivos e Contextuais</strong>",
+      "Quantas vezes vemos listas de links que apenas dizem 'Clique aqui' ou 'Saiba mais'? Para um usuário de leitor de tela, que pode pedir para listar todos os links da página, essa lista se torna inútil. Em vez de 'Para saber mais, <strong>clique aqui</strong>', um link como 'Consulte as <strong>Diretrizes Oficiais de Acessibilidade da W3C</strong>' é imediatamente claro, mesmo fora de contexto.",
+      "",
+      "<h3>O Resultado: Navegar com Confiança</h3>",
+      "Quando a estrutura é sólida, o usuário não precisa 'decifrar' cada nova página. Ele aprende o padrão do seu site e o utiliza para navegar de forma eficiente e autônoma. A confiança nasce dessa previsibilidade. A frustração diminui. A experiência do usuário (UX) se torna universalmente melhor, não apenas para pessoas com deficiência, mas para todos.",
+      "Pense na acessibilidade não como uma funcionalidade, mas como a fundação sobre a qual uma ótima experiência é construída. É a diferença entre uma casa com uma rampa adicionada de última hora e um lar projetado desde o início para acolher a todos. A pintura pode esperar. A fundação, não.",
+      "",
+      "Quer se aprofundar no assunto? O melhor lugar para começar é o portal da Web Accessibility Initiative (WAI).",
+      "Veja também: <a href='https://www.w3.org/WAI/' target='_blank' rel='noopener noreferrer'>Diretrizes Oficiais de Acessibilidade da W3C</a>"
+    ]
+  }
+  ]
+    

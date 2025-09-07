@@ -1,0 +1,661 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #181818;
+    --primary: #0057b8;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --font: 'Inter', sans-serif;
+  }
+  
+  [data-theme="dark"] {
+    --bg: #121212;
+    --text: #f5f5f5;
+    --primary: #ffd600;
+    --card-bg: #1e1e1e;
+    --shadow: 0 4px 12px rgba(255, 255, 255, 0.03);
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 2rem;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 2rem 1rem;
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  .intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .intro h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .intro p {
+    color: #222 !important;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  [data-theme="dark"] .intro p {
+    color: #e0e0e0 !important;
+  }
+  
+  .post-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .post-card {
+    background: var(--card-bg);
+    color: var(--text) !important;
+    /* Reforça contraste do texto principal */
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem 1.2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .post-card h2 {
+    color: var(--primary) !important;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .post-card p {
+    color: #222 !important;
+    font-size: 1rem;
+  }
+  
+  .post-card span, .post-card .date {
+    color: #222 !important;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  [data-theme="dark"] .post-card span, [data-theme="dark"] .post-card .date {
+    color: #f5f5f5 !important;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  body.alto-contraste .post-card span, body.alto-contraste .post-card .date {
+    color: #FFFF00 !important;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  
+  [data-theme="dark"] .post-card {
+    background: var(--card-bg);
+    color: var(--text) !important;
+    border: 1px solid #333;
+  }
+  [data-theme="dark"] .post-card p, [data-theme="dark"] .post-card span, [data-theme="dark"] .post-card .date {
+    color: #e0e0e0 !important;
+  }
+  
+  body.alto-contraste .post-card {
+    background-color: #000 !important;
+    color: #FFFF00 !important;
+    border: 1px solid #fff !important;
+  }
+  body.alto-contraste .post-card p, body.alto-contraste .post-card span, body.alto-contraste .post-card .date {
+    color: #FFFF00 !important;
+  }
+  
+  footer {
+    color: #222 !important;
+    text-align: center;
+    margin: 4rem 2rem 2rem; /* Mais espaço acima, menos abaixo */
+    padding-top: 2rem; /* Espaço acima da linha */
+    border-top: 1px solid #e0e0e0; /* Linha separadora sutil */
+  }
+
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    color: #222 !important;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.75rem; /* Espaçamento entre os links */
+    transition: color 0.2s;
+  }
+
+  [data-theme="dark"] footer, [data-theme="dark"] .footer-links a {
+    color: #e0e0e0 !important;
+  }
+
+  .footer-links a:hover {
+    color: #007bff; /* Cor de destaque ao passar o mouse */
+    text-decoration: underline;
+  }
+
+  .footer-links span {
+    color: #ccc; /* Cor do separador */
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+
+  /* --- MODO ESCURO PARA O RODAPÉ MINIMALISTA --- */
+
+  body.dark-mode footer {
+    border-top-color: #333;
+    color: #777;
+  }
+
+  body.dark-mode .footer-links a {
+    color: #bbb;
+  }
+
+  body.dark-mode .footer-links a:hover {
+    color: #4dabf7;
+  }
+
+  body.dark-mode .footer-links span {
+    color: #555;
+  }
+  .search-container {
+    display: flex;
+    flex-grow: 1;        
+    max-width: 400px;      
+    margin: 0 2rem;         
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#no-results-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 3rem;
+}
+
+.hidden {
+    display: none;
+}.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  [data-theme="dark"] .modal-content {
+    background: var(--card-bg);
+    color: var(--text);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .modal-body p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+  }
+/* --- ESTILOS DO MENU DE ACESSIBILIDADE --- */
+#menu-acessibilidade {
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#menu-acessibilidade button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+#menu-acessibilidade button:hover {
+  background-color: #0056b3;
+}
+
+/* =================================================================== */
+/* --- REGRAS DO MODO ALTO CONTRASTE (VERSÃO CORRIGIDA E FINAL) --- */
+/* =================================================================== */
+
+/* Regra base para o corpo da página */
+body.alto-contraste {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* CORREÇÃO: Unifica todos os containers que devem ter fundo preto e borda branca.
+O .post-card foi adicionado a este grupo.
+*/
+body.alto-contraste header,
+body.alto-contraste #menu-acessibilidade,
+body.alto-contraste footer,
+body.alto-contraste .modal-content,
+body.alto-contraste .post-card {
+  background-color: #000 !important;
+  border: 1px solid #fff !important;
+  box-shadow: none !important; /* Remove qualquer sombra */
+}
+
+/* Garante que a linha superior do rodapé, se houver, fique visível */
+body.alto-contraste footer {
+  border-top-color: #fff !important; 
+}
+
+/* Cor de destaque para links e títulos de posts */
+body.alto-contraste a,
+body.alto-contraste .post-card h2 {
+  color: #FFFF00 !important;
+  text-decoration: underline !important;
+}
+
+/* Foco do teclado bem visível */
+body.alto-contraste a:focus,
+body.alto-contraste button:focus,
+body.alto-contraste input:focus,
+body.alto-contraste [tabindex="0"]:focus {
+  outline: 3px solid #FFFF00 !important;
+  outline-offset: 2px;
+}
+
+/* Botões e inputs gerais */
+body.alto-contraste button,
+body.alto-contraste input[type="search"] {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+/* Botões específicos do menu de acessibilidade */
+body.alto-contraste #menu-acessibilidade button {
+  background-color: #000 !important;
+  color: #FFFF00 !important;
+  border: 1px solid #FFFF00;
+}
+
+/* Contraste do placeholder */
+body.alto-contraste input::placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}
+
+/* Borda para imagens */
+body.alto-contraste img {
+  border: 1px solid #ccc;
+}
+/* DEIXA OS PARÁGRAFOS COM UM CINZA CLARO PARA MELHOR LEITURA */
+body.alto-contraste p {
+    color: #e0e0e0 !important; /* Tom de cinza claro, muito visível no fundo preto */
+}
+
+body.alto-contraste .modal-content,
+body.alto-contraste .modal-content h2,
+body.alto-contraste .modal-content h3,
+body.alto-contraste .modal-content p,
+body.alto-contraste .modal-content .modal-author-date,
+body.alto-contraste .modal-content .modal-body {
+  color: #FFFF00 !important;
+  background-color: #000 !important;
+  border: 1px solid #fff !important;
+}
+body.alto-contraste .modal-content .close-btn {
+  color: #FFFF00 !important;
+}
+
+/* --- CORREÇÕES DE CONTRASTE E ACESSIBILIDADE EM ELEMENTOS ESPECÍFICOS --- */
+
+/* Botões: contraste e foco visível */
+button, .close-btn {
+  background-color: var(--primary);
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button:focus, .close-btn:focus {
+  outline: 3px solid #0057b8;
+  outline-offset: 2px;
+}
+[data-theme="dark"] button, [data-theme="dark"] .close-btn {
+  background-color: var(--primary);
+  color: #181818 !important;
+}
+
+/* Datas e spans: contraste reforçado */
+.post-card span, .modal-author-date, .copyright, .footer-links span {
+  color: #444 !important;
+}
+[data-theme="dark"] .post-card span, [data-theme="dark"] .modal-author-date, [data-theme="dark"] .copyright, [data-theme="dark"] .footer-links span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .post-card span, body.alto-contraste .modal-author-date, body.alto-contraste .copyright, body.alto-contraste .footer-links span {
+  color: #FFFF00 !important;
+}
+
+/* Copyright: contraste e legibilidade */
+footer .copyright {
+  color: #222 !important;
+  background: transparent;
+}
+[data-theme="dark"] footer .copyright {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste footer .copyright {
+  color: #FFFF00 !important;
+}
+
+/* Modal: herança correta do tema e contraste */
+.modal-content {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid #e0e0e0;
+}
+[data-theme="dark"] .modal-content {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid #333;
+}
+body.alto-contraste .modal-content {
+  background: #000 !important;
+  color: #FFFF00 !important;
+  border: 1px solid #fff !important;
+}
+
+/* Garantir contraste em todos os temas para elementos dinâmicos */
+.post-card, .modal-content, header, footer {
+  box-shadow: none !important;
+}
+
+/* Ajuste para datas e spans no modal */
+.modal-author-date {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+[data-theme="dark"] .modal-author-date {
+  color: #e0e0e0;
+}
+body.alto-contraste .modal-author-date {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para spans em cards */
+.post-card span {
+  color: #888 !important;
+}
+[data-theme="dark"] .post-card span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .post-card span {
+  color: #FFFF00 !important;
+}
+
+/* Garantir contraste em todos os botões do menu de acessibilidade */
+#menu-acessibilidade button {
+  background-color: var(--primary);
+  color: #fff !important;
+  border: none;
+}
+[data-theme="dark"] #menu-acessibilidade button {
+  background-color: var(--primary);
+  color: #181818 !important;
+}
+body.alto-contraste #menu-acessibilidade button {
+  background-color: #000 !important;
+  color: #FFFF00 !important;
+  border: 1px solid #FFFF00;
+}
+
+/* Ajuste para spans do menu de acessibilidade */
+#menu-acessibilidade span {
+  color: #888 !important;
+}
+[data-theme="dark"] #menu-acessibilidade span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste #menu-acessibilidade span {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para datas em cards */
+.post-card .date {
+  color: #888 !important;
+}
+[data-theme="dark"] .post-card .date {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .post-card .date {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para copyright no rodapé */
+footer .copyright {
+  color: #222 !important;
+}
+[data-theme="dark"] footer .copyright {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste footer .copyright {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para spans do rodapé */
+.footer-links span {
+  color: #ccc !important;
+}
+[data-theme="dark"] .footer-links span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .footer-links span {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para botões de fechar modal */
+.close-btn {
+  color: #fff !important;
+}
+[data-theme="dark"] .close-btn {
+  color: #fff !important;
+}
+body.alto-contraste .close-btn {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para foco visível em todos os botões e links */
+button:focus, a:focus, .close-btn:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+body.alto-contraste button:focus, body.alto-contraste a:focus, body.alto-contraste .close-btn:focus {
+  outline: 3px solid #FFFF00 !important;
+  outline-offset: 2px;
+}
+
+/* Ajuste para datas e spans em modais */
+.modal-content .modal-author-date, .modal-content span {
+  color: #888 !important;
+}
+[data-theme="dark"] .modal-content .modal-author-date, [data-theme="dark"] .modal-content span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .modal-content .modal-author-date, body.alto-contraste .modal-content span {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para copyright em modais */
+.modal-content .copyright {
+  color: #888 !important;
+}
+[data-theme="dark"] .modal-content .copyright {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .modal-content .copyright {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para spans em modais */
+.modal-content span {
+  color: #888 !important;
+}
+[data-theme="dark"] .modal-content span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .modal-content span {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para datas em modais */
+.modal-content .date {
+  color: #888 !important;
+}
+[data-theme="dark"] .modal-content .date {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .modal-content .date {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para copyright no rodapé em modais */
+.modal-content footer .copyright {
+  color: #888 !important;
+}
+[data-theme="dark"] .modal-content footer .copyright {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .modal-content footer .copyright {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para spans do rodapé em modais */
+.modal-content .footer-links span {
+  color: #ccc !important;
+}
+[data-theme="dark"] .modal-content .footer-links span {
+  color: #e0e0e0 !important;
+}
+body.alto-contraste .modal-content .footer-links span {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para botões de fechar modal em modais */
+.modal-content .close-btn {
+  color: #fff !important;
+}
+[data-theme="dark"] .modal-content .close-btn {
+  color: #fff !important;
+}
+body.alto-contraste .modal-content .close-btn {
+  color: #FFFF00 !important;
+}
+
+/* Ajuste para foco visível em todos os botões e links em modais */
+.modal-content button:focus, .modal-content a:focus, .modal-content .close-btn:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+body.alto-contraste .modal-content button:focus, body.alto-contraste .modal-content a:focus, body.alto-contraste .modal-content .close-btn:focus {
+  outline: 3px solid #FFFF00 !important;
+  outline-offset: 2px;
+}
+
+/* --- FIM DAS CORREÇÕES DE CONTRASTE E ACESSIBILIDADE --- */

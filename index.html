@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Araujo</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/svgs/solid/blog.svg" type="image/svg+xml" />
+  <meta name="description" content="Blog de Lucas Araujo. Pesquisas, reflexões e conteúdo acessível sobre tecnologia e inclusão digital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body> 
+   <nav id="menu-acessibilidade" aria-label="Menu de Acessibilidade">
+  <button id="aumentar-fonte" title="Aumentar tamanho da fonte (Ctrl +)">A+</button>
+  <button id="diminuir-fonte" title="Diminuir tamanho da fonte (Ctrl -)">A-</button>
+  <button id="alto-contraste" title="Ativar ou desativar alto contraste">Alto Contraste</button>
+</nav>
+  <header>
+    <div class="logo" tabindex="0">👨‍💻 Blog Araujo</div>
+    <div class="search-container" role="search" aria-label="Busca por artigos">
+      <label for="search-input" class="sr-only">Pesquisar artigos</label>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Pesquisar por título ou conteúdo..."
+        aria-label="Campo de busca"
+      >
+      <button id="theme-toggle" aria-label="Alternar modo escuro ou claro" title="Alternar tema">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1 tabindex="0">Pesquisas</h1>
+      <p tabindex="0">Um espaço para explorar, refletir e compartilhar.</p>
+      <p tabindex="0">Clique no tema e veja o conteudo</p>
+
+    </section>
+
+    <section class="post-grid" aria-label="Artigos recentes" aria-live="polite">
+      </section>
+      
+      <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-subtitle modal-author-date modal-body" aria-hidden="true">
+        <div class="modal-content" tabindex="-1">
+          <button class="close-btn" aria-label="Fechar modal" title="Fechar">&times;</button>
+          <img id="modal-img" alt="Imagem do artigo" style="max-width: 100%; border-radius: 8px; margin-bottom: 1rem;" />
+          <h2 id="modal-title"></h2>
+          <h3 id="modal-subtitle"></h3>
+          <p class="modal-author-date" id="modal-author-date"></p>
+          <div class="modal-body" id="modal-body"></div>
+        </div>
+      </div>
+
+  </main>
+  <footer>
+    <div class="footer-container">
+        <nav class="footer-links" aria-label="Links importantes">
+            <a href="https://github.com/LucasGAraujo" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span>&bull;</span>
+            <a href="https://expo.dev/accounts/lucasgomes445/snacks" target="_blank" rel="noopener noreferrer">Expo</a>
+            <span>&bull;</span>
+            <a href="https://linkedin.com/in/lucas-araujo-b78109240" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>&bull;</span>
+
+            <a href="mailto:lucasdag445@gmail.com">Email</a>
+        </nav>
+        <p class="copyright">&copy; <span id="current-year">2022</span> Lucas Araujo</p>
+    </div>
+</footer>
+  <script src="./js/app.js" defer></script>
+</body>
+</html>
